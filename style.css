@@ -1,4 +1,8 @@
-/* Reset */
+
+/* =========================================
+   RESET AND GLOBAL STYLES
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,28 +19,40 @@ body {
     background: #172e53;
 }
 
+/* =========================================
+   NAVBAR
+========================================= */
 
-/* Main navbar container */
-
-/* Desktop navbar */
 .navbar {
     position: absolute;
     top: 15px;
-    left: 8%;
-    width: 84%;
-    min-height: 70px;
+    left: 21%;
+    width: 55%;
+    min-height: 60px;
+    margin: 0 auto;
     padding: 0 30px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.92);
-    border: 1px solid #555;
-    border-radius: 40px;
+    gap: 25px;
+
+    background: rgba(0, 0, 0, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 28px;
+
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.15),
+        inset 0 1px 5px rgba(255, 255, 255, 0.12),
+        0 5px 20px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
 }
 
 .logo {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
@@ -49,7 +65,7 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -57,76 +73,23 @@ body {
 }
 
 .nav-links a.active {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #fff;
     padding-bottom: 8px;
 }
 
 .menu-toggle {
     display: none;
-    color: white;
+    color: #fff;
     background: transparent;
     border: none;
     font-size: 32px;
     cursor: pointer;
 }
 
-/* Mobile navbar */
-@media (max-width: 768px) {
-    .navbar {
-        left: 4%;
-        width: 92%;
-        min-height: 60px;
-        padding: 0 18px;
-    }
+/* =========================================
+   HERO / HOME SECTION
+========================================= */
 
-    .logo {
-        font-size: 26px;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: relative;
-        z-index: 1002;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: calc(100% + 10px);
-        left: 0;
-        right: 0;
-        width: 100%;
-        padding: 15px 22px;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        background: #080808;
-        border: 1px solid #555;
-        border-radius: 20px;
-        box-sizing: border-box;
-        z-index: 1001;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 15px 5px;
-        font-size: 16px;
-        border-bottom: 1px solid #292929;
-    }
-
-    .nav-links a:last-child {
-        border-bottom: none;
-    }
-
-    .nav-links a.active {
-        border-bottom: 1px solid #555;
-    }
-}
-/* Original background image remains behind everything */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -148,19 +111,18 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Introduction and photo sit above the background */
 .hero-content {
     position: relative;
     z-index: 1;
     width: 100%;
     max-width: 1250px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
 }
 
-/* Left-hand text */
 .intro {
     flex: 1;
     max-width: 680px;
@@ -186,7 +148,6 @@ body {
     margin-bottom: 28px;
 }
 
-/* Button */
 .hero-btn {
     display: inline-block;
     padding: 12px 26px;
@@ -201,8 +162,6 @@ body {
     background: #b6a6ff;
     color: #111;
 }
-
-/* Personal photo layered over the background */
 
 .profile-image {
     width: 300px;
@@ -220,77 +179,48 @@ body {
     display: block;
 }
 
-/* Mobile screens */
-@media (max-width: 768px) {
-    .hero {
-        padding: 120px 6% 50px;
-    }
+/* =========================================
+   SHARED PORTFOLIO BACKGROUND
+========================================= */
 
-    .hero-content {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 35px;
-    }
+.portfolio-background {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.58)
+        ),
+        url("./back%20ground%20picture.webp");
 
-    .profile-image {
-        flex-basis: 220px;
-        width: 220px;
-        height: 220px;
-    }
-
-    .intro p {
-        font-size: 16px;
-    }
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-
-.navbar {
-    position: absolute;
-    top: 15px;
-
-    /* Center the container and leave wider side margins */
-    left: 21%;
-    width: 55%;
-    margin: 0 auto;
-
-    min-height: 60px;
-    padding: 0 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-
-    background: rgba(0, 0, 0, 0.78);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 28px;
-
-    box-shadow:
-        0 0 8px rgba(255, 255, 255, 0.15),
-        inset 0 1px 5px rgba(255, 255, 255, 0.12),
-        0 5px 20px rgba(0, 0, 0, 0.4);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    z-index: 100;
+.portfolio-background .header,
+.portfolio-background .hero,
+.portfolio-background .about-section,
+.portfolio-background .education-expertise {
+    background-color: transparent;
+    background-image: none;
 }
 
-/* ==============================
+/* =========================================
    ABOUT ME SECTION
-================================= */
+========================================= */
 
 .about-section {
     position: relative;
     min-height: 100vh;
     width: 100%;
     padding: 10px 10% 500px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -50px;
 
-    /* Reuse your original background picture */
+    margin-top: -100px;
+
     background-image:
         linear-gradient(
             rgba(0, 0, 0, 0.72),
@@ -304,11 +234,9 @@ body {
     background-attachment: fixed;
 }
 
-/* Two-column layout */
 .about-layout {
     position: relative;
     z-index: 1;
-
     width: 100%;
     max-width: 1400px;
 
@@ -320,28 +248,37 @@ body {
     align-items: stretch;
 }
 
-/* Left column */
 .about-left {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* About Me heading card */
+/* About title card */
+
 .about-title-card {
+    position: relative;
     min-height: 102px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
+    overflow: hidden;
+    cursor: pointer;
+
     background: rgba(15, 15, 15, 0.80);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(33, 150, 255, 0.65);
     border-radius: 18px;
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 10px rgba(33, 150, 255, 0.12);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .about-title-card h2 {
@@ -351,7 +288,55 @@ body {
     text-align: center;
 }
 
-/* Information card */
+.about-title-card:hover {
+    border-color: #2196ff;
+    box-shadow: 0 0 15px rgba(33, 150, 255, 0.3);
+}
+
+.about-title-card .about-hover-text {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: inherit;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.about-title-card:hover .about-hover-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.about-title-card .intro-small {
+    color: #2196f3;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.about-title-card .intro-large {
+    color: #fff;
+    font-size: 27px;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* About information card */
+
 .about-info-card {
     position: relative;
     flex: 1;
@@ -379,7 +364,6 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Blue accent line */
 .about-info-card::before {
     content: "";
     position: absolute;
@@ -430,7 +414,8 @@ body {
     line-height: 1.7;
 }
 
-/* Right column: About Me text */
+/* About description card */
+
 .about-description-card {
     min-width: 0;
     padding: 30px;
@@ -441,13 +426,22 @@ body {
     gap: 14px;
 
     background: rgba(12, 12, 12, 0.82);
-    border: 1px solid rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(33, 150, 255, 0.65);
     border-radius: 18px;
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 10px rgba(33, 150, 255, 0.12);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-description-card:hover {
+    border-color: #2196ff;
+    box-shadow: 0 0 15px rgba(33, 150, 255, 0.3);
 }
 
 .about-description-card p {
@@ -456,72 +450,10 @@ body {
     line-height: 1.75;
 }
 
-/* ==============================
-   TABLET AND MOBILE
-================================= */
+/* =========================================
+   KENYA LOCATION CARD
+========================================= */
 
-@media (max-width: 850px) {
-    .about-section {
-        min-height: auto;
-        padding: 30px 5% 40px;
-        background-attachment: scroll;
-    }
-
-    .about-layout {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .about-left {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    .about-title-card {
-        min-height: 180px;
-        padding: 15px;
-    }
-
-    .about-info-card {
-        min-height: 180px;
-        padding: 20px;
-    }
-
-    .about-description-card {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 520px) {
-    .about-section {
-        padding: 90px 16px 40px;
-    }
-
-    .about-left {
-        grid-template-columns: 1fr;
-    }
-
-    .about-title-card {
-        min-height: 85px;
-    }
-
-    .about-info-card {
-        min-height: 210px;
-    }
-
-    .about-description-card {
-        padding: 22px 18px;
-        gap: 13px;
-    }
-
-    .about-description-card p {
-        font-size: 15px;
-        line-height: 1.8;
-    }
-}
-
-/* Blue outline around the location card */
 .kenya-card {
     position: relative;
     min-height: 260px;
@@ -538,8 +470,9 @@ body {
     background: #080b12;
     cursor: pointer;
 
-    transition: box-shadow 0.3s ease,
-                border-color 0.3s ease;
+    transition:
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .kenya-card:hover,
@@ -550,7 +483,6 @@ body {
         inset 0 0 12px rgba(33, 150, 255, 0.12);
 }
 
-/* Kenya text */
 .kenya-content {
     position: relative;
     z-index: 1;
@@ -587,7 +519,6 @@ body {
     margin-top: 15px;
 }
 
-/* Nairobi image overlay */
 .nairobi-overlay {
     position: absolute;
     inset: 0;
@@ -612,11 +543,11 @@ body {
     display: block;
 }
 
-/* Dark gradient behind the Nairobi title */
 .nairobi-overlay::after {
     content: "";
     position: absolute;
     inset: 0;
+
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.88),
@@ -629,7 +560,7 @@ body {
     z-index: 1;
     bottom: 24px;
     left: 25px;
-    color: white;
+    color: #fff;
 }
 
 .nairobi-caption span {
@@ -649,7 +580,6 @@ body {
     color: #e2e8f0;
 }
 
-/* Reveal Nairobi on hover or keyboard focus */
 .kenya-card:hover .nairobi-overlay,
 .kenya-card:focus-visible .nairobi-overlay {
     opacity: 1;
@@ -662,40 +592,8 @@ body {
     opacity: 0;
 }
 
-/* Blue borders around the other About Me cells */
-.about-title-card,
-.about-description-card {
-    border: 1px solid rgba(33, 150, 255, 0.65);
-    box-shadow: 0 0 10px rgba(33, 150, 255, 0.12);
-    transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.about-title-card:hover,
-.about-description-card:hover {
-    border-color: #2196ff;
-    box-shadow: 0 0 15px rgba(33, 150, 255, 0.3);
-}
-
-/* Smaller screens */
-@media (max-width: 520px) {
-    .kenya-content {
-        padding: 22px;
-        min-height: 220px;
-    }
-
-    .kenya-card {
-        min-height: 220px;
-    }
-
-    .nairobi-caption h3 {
-        font-size: 30px;
-    }
-}
-
 /* =========================================
    EDUCATION & EXPERTISE
-   Uses the shared portfolio background
 ========================================= */
 
 .education-expertise {
@@ -704,8 +602,8 @@ body {
     width: 100%;
     margin: -40px 0 0;
     padding: 20px 10% 60px;
-    box-sizing: border-box;
 
+    box-sizing: border-box;
     background: transparent;
     color: #f5f5f5;
 }
@@ -721,7 +619,6 @@ body {
     align-items: start;
 }
 
-/* Headings */
 .section-heading {
     margin: 0 0 36px;
     color: #f1f1f3;
@@ -732,9 +629,7 @@ body {
     letter-spacing: -1.3px;
 }
 
-/* =========================================
-   EDUCATION TIMELINE
-========================================= */
+/* Education timeline */
 
 .education-timeline {
     position: relative;
@@ -796,9 +691,7 @@ body {
     line-height: 1.5;
 }
 
-/* =========================================
-   CHUKA IMAGE HOVER
-========================================= */
+/* Chuka image hover */
 
 .degree-item {
     border-radius: 12px;
@@ -810,6 +703,7 @@ body {
     inset: -8px 0 -8px 25px;
     z-index: 5;
     overflow: hidden;
+
     border: 1px solid rgba(55, 155, 255, 0.8);
     border-radius: 12px;
 
@@ -817,8 +711,9 @@ body {
     visibility: hidden;
     pointer-events: none;
 
-    transition: opacity 0.35s ease,
-                visibility 0.35s ease;
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
 }
 
 .chuka-image-overlay img {
@@ -832,6 +727,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
+
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.88),
@@ -865,9 +761,7 @@ body {
     visibility: visible;
 }
 
-/* =========================================
-   SKILLS PANEL
-========================================= */
+/* Skills panel */
 
 .skills-card {
     display: flex;
@@ -878,6 +772,7 @@ body {
     width: 100%;
     min-height: 150px;
     padding: 28px 35px;
+
     box-sizing: border-box;
 
     background: rgba(17, 17, 17, 0.72);
@@ -909,9 +804,7 @@ body {
 .javascript-icon { color: #f7df1e; }
 .python-icon { color: #3776ab; }
 
-/* =========================================
-   EXPERTISE PANEL
-========================================= */
+/* Expertise panel */
 
 .expertise-card {
     position: relative;
@@ -950,222 +843,8 @@ body {
 }
 
 /* =========================================
-   TABLETS
+   WEB DEVELOPMENT LANGUAGES
 ========================================= */
-
-@media (max-width: 1000px) {
-    .education-expertise-container {
-        max-width: 760px;
-        column-gap: 35px;
-    }
-
-    .section-heading {
-        font-size: 34px;
-    }
-
-    .timeline-content h3 {
-        font-size: 23px;
-    }
-
-    .institution {
-        font-size: 16px;
-    }
-
-    .skills-card {
-        gap: 12px;
-        padding: 22px 18px;
-    }
-
-    .skill-icon {
-        font-size: 38px;
-    }
-
-    .expertise-card {
-        padding-left: 48px;
-    }
-
-    .expertise-dot {
-        left: 20px;
-    }
-
-    .expertise-card p {
-        font-size: 17px;
-    }
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 650px) {
-    .education-expertise {
-        padding: 10px 20px 35px;
-    }
-
-    .education-expertise-container {
-        grid-template-columns: 1fr;
-        row-gap: 45px;
-    }
-
-    .section-heading {
-        font-size: 31px;
-        letter-spacing: -0.7px;
-        margin-bottom: 28px;
-    }
-
-    .education-timeline {
-        gap: 35px;
-    }
-
-    .timeline-content h3 {
-        font-size: 22px;
-    }
-
-    .education-date {
-        font-size: 14px;
-    }
-
-    .institution {
-        font-size: 15px;
-    }
-
-    .skills-card {
-        min-height: 115px;
-        padding: 20px 15px;
-        gap: 10px;
-    }
-
-    .skill-icon {
-        flex-basis: 40px;
-        height: 40px;
-        font-size: 35px;
-    }
-
-    .expertise-card {
-        margin-top: 20px;
-        padding: 22px 18px 22px 47px;
-    }
-
-    .expertise-dot {
-        top: 29px;
-        left: 19px;
-        width: 12px;
-        height: 12px;
-    }
-
-    .expertise-card p {
-        font-size: 16px;
-        line-height: 1.75;
-    }
-
-    .chuka-image-overlay {
-        inset: -8px 0 -8px 15px;
-    }
-}
-
-.portfolio-background {
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.48),
-            rgba(0, 0, 0, 0.58)
-        ),
-        url("./back%20ground%20picture.webp");
-
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.portfolio-background .header,
-.portfolio-background .hero,
-.portfolio-background .about-section,
-.portfolio-background .education-expertise {
-    background-color: transparent;
-    background-image: none;
-}
-
-@media (min-width: 769px) {
-    .education-expertise {
-        margin-top: -350px;
-        padding-top: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .education-expertise {
-        margin-top: -10px;
-    }
-}
-
-@media (min-width: 769px) {
-    .about-section {
-        margin-top: -100px;
-        padding-top: 10px;
-    }
-}
-@media (min-width: 769px) {
-    .hero {
-        margin-top: -50px;
-        padding-top: 10px;
-    }
-}
-
-.about-title-card {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.about-title-card .about-hover-text {
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: inherit;
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    transition: opacity 0.35s ease, visibility 0.35s ease;
-}
-
-.about-title-card:hover .about-hover-text {
-    opacity: 1;
-    visibility: visible;
-}
-
-.about-title-card .intro-small {
-    color: #2196f3;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 3px;
-}
-
-.about-title-card .intro-large {
-    color: #fff;
-    font-size: 27px;
-    font-weight: 800;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .about-title-card .intro-large {
-        font-size: 21px;
-    }
-}
-
-/* =====================================
-   WEB DEVELOPMENT LANGUAGES BOX
-===================================== */
 
 .web-languages-box {
     width: 100%;
@@ -1173,8 +852,8 @@ body {
     align-self: stretch;
     margin: 0;
     padding: 25px 22px;
-    box-sizing: border-box;
 
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
 
@@ -1185,7 +864,6 @@ body {
     color: #fff;
 }
 
-/* Heading */
 .web-languages-box h2 {
     margin: 0 0 25px;
     text-align: center;
@@ -1194,9 +872,9 @@ body {
     color: #fff;
 }
 
-/* Grid: 4 top, 3 middle, 2 bottom */
 .languages-grid {
     flex: 1;
+
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-auto-rows: minmax(85px, auto);
@@ -1204,14 +882,13 @@ body {
     gap: 18px 12px;
 }
 
-/* Language cards */
 .language-item {
     grid-column: span 3;
     min-width: 0;
     min-height: 85px;
     padding: 10px 4px;
-    box-sizing: border-box;
 
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1223,11 +900,13 @@ body {
     border-radius: 14px;
     box-shadow: 0 0 8px rgba(0, 157, 255, 0.12);
 
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-/* Middle row: 3 centered */
+/* Middle row: three centered cards */
+
 .language-item:nth-child(5) {
     grid-column: 2 / span 3;
 }
@@ -1240,7 +919,8 @@ body {
     grid-column: 9 / span 3;
 }
 
-/* Bottom row: 2 centered */
+/* Bottom row: two centered cards */
+
 .language-item:nth-child(8) {
     grid-column: 3 / span 4;
 }
@@ -1249,92 +929,26 @@ body {
     grid-column: 7 / span 4;
 }
 
-/* Icons */
 .language-item i {
     font-size: 30px;
     line-height: 1;
 }
 
-/* Names */
 .language-item span {
     color: #fff;
     font-size: 14px;
     text-align: center;
 }
 
-/* Hover */
 .language-item:hover {
     transform: translateY(-3px);
     border-color: #36bdff;
     box-shadow: 0 0 15px rgba(0, 157, 255, 0.4);
 }
 
-/* Tablet */
-@media (max-width: 900px) {
-    .web-languages-box {
-        height: auto;
-        padding: 22px 14px;
-    }
-
-    .web-languages-box h2 {
-        font-size: 23px;
-    }
-
-    .languages-grid {
-        flex: initial;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-auto-rows: auto;
-        align-content: initial;
-        gap: 14px 8px;
-    }
-
-    .language-item:nth-child(n) {
-        grid-column: auto;
-    }
-
-    .language-item {
-        min-height: 80px;
-    }
-
-    .language-item i {
-        font-size: 28px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .web-languages-box {
-        padding: 18px 10px;
-        border-radius: 16px;
-    }
-
-    .web-languages-box h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .languages-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px 7px;
-    }
-
-    .language-item {
-        min-height: 75px;
-        padding: 8px 3px;
-    }
-
-    .language-item i {
-        font-size: 25px;
-    }
-
-    .language-item span {
-        font-size: 12px;
-    }
-}
-
-/* =====================================
+/* =========================================
    CONTACT SECTION
-===================================== */
+========================================= */
 
 .contact-section {
     width: 100%;
@@ -1355,7 +969,6 @@ body {
     align-items: center;
 }
 
-/* Left side */
 .contact-info {
     min-width: 0;
 }
@@ -1393,7 +1006,6 @@ body {
     line-height: 1.8;
 }
 
-/* Contact details */
 .contact-details {
     display: flex;
     flex-direction: column;
@@ -1436,7 +1048,8 @@ body {
     font-size: 14px;
 }
 
-/* Right side: form card */
+/* Contact form card */
+
 .contact-form-box {
     min-width: 0;
     padding: 30px;
@@ -1463,7 +1076,6 @@ body {
     line-height: 1.6;
 }
 
-/* Form fields */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -1505,8 +1117,9 @@ body {
     font: inherit;
     font-size: 14px;
 
-    transition: border-color 0.25s ease,
-                box-shadow 0.25s ease;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .form-group input::placeholder,
@@ -1525,7 +1138,6 @@ body {
     min-height: 130px;
 }
 
-/* Submit button */
 .contact-submit {
     width: 100%;
     padding: 14px 18px;
@@ -1544,9 +1156,10 @@ body {
     font-weight: 700;
     cursor: pointer;
 
-    transition: background 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .contact-submit:hover {
@@ -1555,7 +1168,6 @@ body {
     box-shadow: 0 0 18px rgba(0, 157, 255, 0.3);
 }
 
-/* Hide the spam-trap field */
 .form-trap {
     position: absolute;
     left: -10000px;
@@ -1564,65 +1176,12 @@ body {
     overflow: hidden;
 }
 
-/* =====================================
-   TABLET
-===================================== */
-
-@media (max-width: 900px) {
-    .contact-section {
-        padding: 45px 20px;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .contact-description {
-        max-width: 650px;
-    }
-}
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 520px) {
-    .contact-section {
-        padding: 35px 14px;
-    }
-
-    .contact-container {
-        gap: 28px;
-    }
-
-    .contact-form-box {
-        padding: 22px 16px;
-        border-radius: 15px;
-    }
-
-    .contact-form-box > h3 {
-        font-size: 22px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-info h2 {
-        font-size: 36px;
-    }
-
-    .contact-description {
-        font-size: 15px;
-    }
-}
-
-/* =====================================
+/* =========================================
    PORTFOLIO FOOTER
-===================================== */
+========================================= */
 
 .portfolio-footer {
+    position: relative;
     width: 100%;
     padding: 22px 20px;
     box-sizing: border-box;
@@ -1675,38 +1234,27 @@ body {
 }
 
 .back-to-top:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
 .back-to-top i {
     font-size: 11px;
 }
 
-@media (max-width: 480px) {
-    .portfolio-footer {
-        padding: 18px 12px;
-    }
-
-    .portfolio-footer p {
-        font-size: 12px;
-    }
-}
-
 /* Footer live clock */
-footer {
-    position: relative;
-}
 
 .footer-clock {
     position: absolute;
     right: 25px;
     bottom: 15px;
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 4px;
-    font-family: 'Courier New', monospace;
-    color: #ffffff;
+
+    font-family: "Courier New", monospace;
+    color: #fff;
 }
 
 .clock-label {
@@ -1728,11 +1276,517 @@ footer {
 #clock-date {
     font-family: Arial, sans-serif;
     font-size: 10px;
-    color: #cccccc;
+    color: #ccc;
 }
 
-/* Mobile responsiveness */
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (min-width: 651px) and (max-width: 1024px) {
+
+    /* Navbar */
+    .navbar {
+        left: 5%;
+        width: 90%;
+        padding: 0 24px;
+        gap: 16px;
+    }
+
+    .logo {
+        font-size: 29px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: 0;
+        padding: 100px 5% 25px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        gap: 25px;
+    }
+
+    .profile-image {
+        width: 240px;
+        height: 240px;
+        flex-basis: 240px;
+    }
+
+    .intro p {
+        font-size: 17px;
+    }
+
+    /* About: preserve the existing two-column card layout */
+    .about-section {
+        min-height: auto;
+        margin-top: -30px;
+        padding: 10px 5% 30px;
+        background-attachment: scroll;
+    }
+
+    .about-layout {
+        grid-template-columns: minmax(0, 0.85fr)
+                               minmax(0, 1.75fr);
+        gap: 12px;
+    }
+
+    .about-left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-title-card {
+        min-height: 100px;
+    }
+
+    .about-info-card {
+        min-height: 200px;
+        padding: 20px;
+    }
+
+    .about-description-card {
+        padding: 22px;
+        gap: 10px;
+    }
+
+    .about-description-card p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .about-title-card .intro-large {
+        font-size: 23px;
+    }
+
+    /* Education and expertise */
+    .education-expertise {
+        margin-top: -20px;
+        padding: 15px 5% 30px;
+    }
+
+    .education-expertise-container {
+        column-gap: 25px;
+    }
+
+    .section-heading {
+        font-size: 34px;
+        margin-bottom: 22px;
+    }
+
+    .education-timeline {
+        gap: 30px;
+    }
+
+    .timeline-content h3 {
+        font-size: 23px;
+    }
+
+    .education-date {
+        font-size: 14px;
+    }
+
+    .institution {
+        font-size: 15px;
+    }
+
+    .skills-card {
+        gap: 10px;
+        padding: 20px 14px;
+        min-height: 115px;
+    }
+
+    .skill-icon {
+        flex-basis: 40px;
+        height: 40px;
+        font-size: 34px;
+    }
+
+    .expertise-card {
+        margin-top: 20px;
+        padding: 20px 16px 20px 45px;
+    }
+
+    .expertise-dot {
+        left: 18px;
+        top: 28px;
+    }
+
+    .expertise-card p {
+        font-size: 16px;
+    }
+
+    /* Languages */
+    .web-languages-box {
+        height: auto;
+        padding: 22px 14px;
+    }
+
+    .web-languages-box h2 {
+        font-size: 23px;
+    }
+
+    .languages-grid {
+        flex: initial;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        align-content: initial;
+        gap: 14px 8px;
+    }
+
+    .language-item:nth-child(n) {
+        grid-column: auto;
+    }
+
+    .language-item {
+        min-height: 80px;
+    }
+
+    .language-item i {
+        font-size: 28px;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 30px 5%;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contact-description {
+        margin-bottom: 20px;
+        max-width: 650px;
+    }
+
+    .contact-details {
+        gap: 14px;
+    }
+
+    .contact-form-box {
+        padding: 25px;
+    }
+
+    /* Footer */
+    .portfolio-footer {
+        padding: 15px 20px;
+        gap: 8px;
+    }
+}
+
+/* =========================================
+   MOBILE NAVIGATION AND HERO
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        left: 4%;
+        width: 92%;
+        min-height: 60px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 15px 22px;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        background: #080808;
+        border: 1px solid #555;
+        border-radius: 20px;
+
+        box-sizing: border-box;
+        z-index: 1001;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 5px;
+        font-size: 16px;
+        border-bottom: 1px solid #292929;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a.active {
+        border-bottom: 1px solid #555;
+    }
+
+    .hero {
+        padding: 120px 6% 50px;
+        margin-top: 0;
+        min-height: auto;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .profile-image {
+        flex-basis: 220px;
+        width: 220px;
+        height: 220px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .about-title-card .intro-large {
+        font-size: 21px;
+    }
+
+    .education-expertise {
+        margin-top: -10px;
+    }
+
+    .contact-section {
+        padding: 45px 20px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-description {
+        max-width: 650px;
+    }
+}
+
+/* =========================================
+   TABLET AND MOBILE ABOUT LAYOUT
+========================================= */
+
+@media (min-width: 521px) and (max-width: 850px) {
+
+    .about-section {
+        min-height: auto;
+        padding: 10px 5% 30px;
+        margin-top: -30px;
+        background-attachment: scroll;
+    }
+
+    .about-layout {
+        grid-template-columns: minmax(0, 0.85fr)
+                               minmax(0, 1.75fr);
+        gap: 12px;
+    }
+
+    .about-left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-title-card {
+        min-height: 100px;
+        padding: 12px;
+    }
+
+    .about-info-card {
+        min-height: 180px;
+        padding: 18px;
+    }
+
+    .about-description-card {
+        padding: 22px;
+    }
+}
+
+/* =========================================
+   TABLET AND MOBILE CONTACT / LANGUAGES
+========================================= */
+
+@media (max-width: 900px) {
+
+    .web-languages-box {
+        height: auto;
+        padding: 22px 14px;
+    }
+
+    .web-languages-box h2 {
+        font-size: 23px;
+    }
+
+    .languages-grid {
+        flex: initial;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        align-content: initial;
+        gap: 14px 8px;
+    }
+
+    .language-item:nth-child(n) {
+        grid-column: auto;
+    }
+
+    .language-item {
+        min-height: 80px;
+    }
+
+    .language-item i {
+        font-size: 28px;
+    }
+}
+
+/* =========================================
+   MOBILE ABOUT SECTION
+========================================= */
+
+@media (max-width: 520px) {
+
+    .about-section {
+        min-height: auto;
+        padding: 90px 16px 40px;
+        margin-top: 0;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .about-left {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .about-title-card {
+        min-height: 85px;
+    }
+
+    .about-info-card {
+        min-height: 210px;
+    }
+
+    .about-description-card {
+        padding: 22px 18px;
+        gap: 13px;
+    }
+
+    .about-description-card p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .kenya-content {
+        padding: 22px;
+        min-height: 220px;
+    }
+
+    .kenya-card {
+        min-height: 220px;
+    }
+
+    .nairobi-caption h3 {
+        font-size: 30px;
+    }
+
+    .web-languages-box {
+        padding: 18px 10px;
+        border-radius: 16px;
+    }
+
+    .web-languages-box h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .languages-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px 7px;
+    }
+
+    .language-item {
+        min-height: 75px;
+        padding: 8px 3px;
+    }
+
+    .language-item i {
+        font-size: 25px;
+    }
+
+    .language-item span {
+        font-size: 12px;
+    }
+
+    .contact-section {
+        padding: 35px 14px;
+    }
+
+    .contact-container {
+        gap: 28px;
+    }
+
+    .contact-form-box {
+        padding: 22px 16px;
+        border-radius: 15px;
+    }
+
+    .contact-form-box > h3 {
+        font-size: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info h2 {
+        font-size: 36px;
+    }
+
+    .contact-description {
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE FOOTER
+========================================= */
+
 @media (max-width: 600px) {
+
     .footer-clock {
         position: static;
         align-items: center;
@@ -1741,5 +1795,38 @@ footer {
 
     #live-clock {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .portfolio-footer {
+        padding: 18px 12px;
+    }
+
+    .portfolio-footer p {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   DESKTOP-ONLY SECTION POSITIONING
+========================================= */
+
+@media (min-width: 1025px) {
+
+    .hero {
+        margin-top: -50px;
+        padding-top: 10px;
+    }
+
+    .about-section {
+        margin-top: -100px;
+        padding-top: 10px;
+    }
+
+    .education-expertise {
+        margin-top: -350px;
+        padding-top: 10px;
     }
 }
