@@ -1806,3 +1806,101 @@ footer {
     }
 }
 
+/* =========================================
+   TABLET VIEW — REDUCE GAPS BETWEEN SECTIONS
+   Applies to tablets from 651px to 1024px
+========================================= */
+
+@media (min-width: 651px) and (max-width: 1024px) {
+
+    /* HERO SECTION */
+    .hero {
+        margin-top: 0;
+        padding-top: 100px;
+        padding-bottom: 25px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        gap: 25px;
+    }
+
+    /* ABOUT ME SECTION */
+    .about-section {
+        min-height: auto;
+        margin-top: -35px;
+        padding: 10px 5% 25px;
+        background-attachment: scroll;
+    }
+
+    .about-layout {
+        gap: 12px;
+    }
+
+    .about-left {
+        gap: 10px;
+    }
+
+    .about-title-card {
+        min-height: 110px;
+    }
+
+    .about-info-card {
+        min-height: 180px;
+    }
+
+    .about-description-card {
+        padding: 22px;
+        gap: 10px;
+    }
+
+    /* EDUCATION & EXPERTISE */
+    .education-expertise {
+        margin-top: -20px;
+        padding: 15px 5% 30px;
+    }
+
+    .education-expertise-container {
+        column-gap: 25px;
+    }
+
+    .section-heading {
+        margin-bottom: 22px;
+    }
+
+    .education-timeline {
+        gap: 30px;
+    }
+
+    .expertise-card {
+        margin-top: 20px;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+        padding: 30px 5%;
+    }
+
+    .contact-container {
+        gap: 25px;
+    }
+
+    .contact-details {
+        gap: 14px;
+    }
+
+    .contact-description {
+        margin-bottom: 20px;
+    }
+
+    .contact-form-box {
+        padding: 25px;
+    }
+
+    /* FOOTER */
+    .portfolio-footer {
+        padding: 15px 20px;
+        gap: 8px;
+    }
+}
+
