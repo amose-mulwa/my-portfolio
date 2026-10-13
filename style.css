@@ -1442,32 +1442,240 @@ body {
     }
 }
 
-/* FORCE TABLET SPACING FIX */
+/* =========================================
+   TABLET RESPONSIVENESS
+   Screen widths: 651px - 1024px
+========================================= */
+
 @media screen and (min-width: 651px) and (max-width: 1024px) {
 
-    /* Navbar */
+    /* NAVIGATION BAR */
     .navbar {
-        top: 10px !important;
+        top: 8px !important;
+        left: 4% !important;
+        width: 92% !important;
+        min-height: 55px !important;
+        padding: 8px 18px !important;
+        gap: 12px !important;
     }
 
-    /* Reduce space between navbar and hero content */
+    .logo {
+        font-size: 26px !important;
+    }
+
+    .nav-links {
+        gap: 14px !important;
+    }
+
+    .nav-links a {
+        font-size: 14px !important;
+    }
+
+
+    /* HERO SECTION */
     .hero {
+        min-height: unset !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 75px 5% 10px !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        gap: 20px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .intro {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .intro h1,
+    .intro h2,
+    .intro p {
+        margin-top: 0 !important;
+    }
+
+    .intro p {
+        margin-bottom: 12px !important;
+        line-height: 1.5;
+    }
+
+    .profile-image {
+        width: 220px !important;
+        height: 220px !important;
+        flex-basis: 220px !important;
+    }
+
+
+    /* ABOUT ME SECTION */
+    .about-section {
+        min-height: unset !important;
+        height: auto !important;
+        margin-top: -15px !important;
+        margin-bottom: 0 !important;
+        padding: 5px 5% 20px !important;
+        background-attachment: scroll;
+    }
+
+    .about-layout {
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.75fr) !important;
+        gap: 12px !important;
+        margin: 0 !important;
+    }
+
+    .about-left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px !important;
+    }
+
+    .about-title-card {
+        min-height: 90px !important;
+        padding: 12px !important;
+    }
+
+    .about-info-card {
+        min-height: 160px !important;
+        padding: 15px !important;
+    }
+
+    .about-description-card {
+        padding: 18px !important;
+        gap: 8px !important;
+    }
+
+    .about-description-card p {
+        font-size: 14px !important;
+        line-height: 1.55 !important;
+        margin-top: 0 !important;
+        margin-bottom: 8px !important;
+    }
+
+
+    /* EDUCATION AND EXPERTISE */
+    .education-expertise {
+        min-height: unset !important;
+        height: auto !important;
+        margin-top: -10px !important;
+        margin-bottom: 0 !important;
+        padding: 10px 5% 20px !important;
+    }
+
+    .education-expertise-container {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        column-gap: 20px !important;
+        row-gap: 15px !important;
+    }
+
+    .section-heading {
+        font-size: 32px !important;
+        margin-top: 0 !important;
+        margin-bottom: 18px !important;
+    }
+
+    .education-timeline {
+        gap: 22px !important;
+        margin-top: 0 !important;
+    }
+
+    .timeline-content h3 {
+        font-size: 21px !important;
+        margin-top: 0 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .education-date,
+    .institution {
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .skills-card {
+        min-height: unset !important;
+        padding: 15px 12px !important;
+        gap: 8px !important;
+    }
+
+    .skill-icon {
+        flex-basis: 38px !important;
+        height: 38px !important;
+        font-size: 30px !important;
+    }
+
+    .expertise-card {
+        margin-top: 12px !important;
+        padding: 18px 15px 18px 42px !important;
+    }
+
+
+    /* JOURNEY SECTION */
+    .journey-section {
+        min-height: unset !important;
+        height: auto !important;
+        margin-top: -10px !important;
+        margin-bottom: 0 !important;
+        padding-top: 10px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .journey-container {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        gap: 15px !important;
+    }
+
+
+    /* CONTACT ME */
+    .contact-section {
         min-height: unset !important;
         height: auto !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        padding-top: 85px !important;
-        padding-bottom: 10px !important;
-        align-items: center;
+        padding: 20px 5% !important;
     }
 
-    /* Pull About Me closer to the hero */
-    .about-section {
+    .contact-container {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .contact-description {
+        margin-top: 0 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .contact-details {
+        gap: 10px !important;
+    }
+
+    .contact-form-box {
+        padding: 20px !important;
+    }
+
+
+    /* FOOTER */
+    .portfolio-footer {
         min-height: unset !important;
         height: auto !important;
-        margin-top: -100px !important;
+        margin-top: 0 !important;
         margin-bottom: 0 !important;
-        padding-top: 10px !important;
-        padding-bottom: 25px !important;
+        padding: 12px 18px !important;
+        gap: 6px !important;
+    }
+
+    /* Remove unnecessary default spacing */
+    .hero > *,
+    .about-section > *,
+    .education-expertise > *,
+    .journey-section > *,
+    .contact-section > * {
+        margin-bottom: 0;
     }
 }
