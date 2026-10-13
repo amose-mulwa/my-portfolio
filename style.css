@@ -460,74 +460,12 @@ body {
    TABLET AND MOBILE
 ================================= */
 
-
-/* TABLET AND MOBILE */
-
-/* TABLET VIEW — REDUCE GAP ABOVE ABOUT ME */
-@media (min-width: 521px) and (max-width: 850px) {
+@media (max-width: 850px) {
     .about-section {
         min-height: auto;
-        padding: 0 5% 30px;
-        margin-top: -100px;
+        padding: 30px 5% 40px;
         background-attachment: scroll;
     }
-
-    .about-layout {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .about-left {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    .about-title-card {
-        min-height: 160px;
-        padding: 12px;
-    }
-
-    .about-info-card {
-        min-height: 160px;
-        padding: 18px;
-    }
-
-    .about-description-card {
-        padding: 22px;
-    }
-}
-
-
-/* SMALL MOBILE SCREENS */
-@media (max-width: 520px) {
-    .about-section {
-        padding: 90px 16px 40px;
-        margin-top: 0;
-    }
-
-    .about-left {
-        grid-template-columns: 1fr;
-    }
-
-    .about-title-card {
-        min-height: 85px;
-    }
-
-    .about-info-card {
-        min-height: 210px;
-    }
-
-    .about-description-card {
-        padding: 22px 18px;
-        gap: 13px;
-    }
-
-    .about-description-card p {
-        font-size: 15px;
-        line-height: 1.8;
-    }
-}
 
     .about-layout {
         grid-template-columns: 1fr;
@@ -1805,4 +1743,3 @@ footer {
         font-size: 20px;
     }
 }
-
