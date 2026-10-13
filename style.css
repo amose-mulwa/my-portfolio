@@ -1281,14 +1281,17 @@ body {
 
 /* =========================================
    TABLET RESPONSIVENESS
+   Compact spacing between sections
 ========================================= */
 
 @media (min-width: 651px) and (max-width: 1024px) {
 
-    /* Navbar */
+    /* NAVBAR */
     .navbar {
+        top: 12px;
         left: 5%;
         width: 90%;
+        min-height: 58px;
         padding: 0 24px;
         gap: 16px;
     }
@@ -1305,10 +1308,10 @@ body {
         font-size: 15px;
     }
 
-    /* Hero */
+    /* HERO SECTION */
     .hero {
         margin-top: 0;
-        padding: 100px 5% 25px;
+        padding: 100px 5% 15px;
         min-height: auto;
     }
 
@@ -1324,19 +1327,22 @@ body {
 
     .intro p {
         font-size: 17px;
+        margin-bottom: 20px;
     }
 
-    /* About: preserve the existing two-column card layout */
+    /* ABOUT ME SECTION */
     .about-section {
         min-height: auto;
-        margin-top: -30px;
-        padding: 10px 5% 30px;
+        margin-top: -15px;
+        padding: 10px 5% 20px;
         background-attachment: scroll;
     }
 
+    /* Preserve the original two-column About layout */
     .about-layout {
-        grid-template-columns: minmax(0, 0.85fr)
-                               minmax(0, 1.75fr);
+        grid-template-columns:
+            minmax(0, 0.85fr)
+            minmax(0, 1.75fr);
         gap: 12px;
     }
 
@@ -1348,11 +1354,12 @@ body {
 
     .about-title-card {
         min-height: 100px;
+        padding: 12px;
     }
 
     .about-info-card {
-        min-height: 200px;
-        padding: 20px;
+        min-height: 180px;
+        padding: 18px;
     }
 
     .about-description-card {
@@ -1365,14 +1372,10 @@ body {
         line-height: 1.65;
     }
 
-    .about-title-card .intro-large {
-        font-size: 23px;
-    }
-
-    /* Education and expertise */
+    /* EDUCATION AND EXPERTISE */
     .education-expertise {
-        margin-top: -20px;
-        padding: 15px 5% 30px;
+        margin-top: -10px;
+        padding: 15px 5% 25px;
     }
 
     .education-expertise-container {
@@ -1426,48 +1429,19 @@ body {
         font-size: 16px;
     }
 
-    /* Languages */
-    .web-languages-box {
-        height: auto;
-        padding: 22px 14px;
-    }
-
-    .web-languages-box h2 {
-        font-size: 23px;
-    }
-
-    .languages-grid {
-        flex: initial;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-auto-rows: auto;
-        align-content: initial;
-        gap: 14px 8px;
-    }
-
-    .language-item:nth-child(n) {
-        grid-column: auto;
-    }
-
-    .language-item {
-        min-height: 80px;
-    }
-
-    .language-item i {
-        font-size: 28px;
-    }
-
-    /* Contact */
+    /* CONTACT ME */
     .contact-section {
-        padding: 30px 5%;
+        margin-top: 0;
+        padding: 25px 5%;
     }
 
     .contact-container {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 22px;
     }
 
     .contact-description {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
         max-width: 650px;
     }
 
@@ -1479,12 +1453,14 @@ body {
         padding: 25px;
     }
 
-    /* Footer */
+    /* FOOTER */
     .portfolio-footer {
+        margin-top: 0;
         padding: 15px 20px;
         gap: 8px;
     }
 }
+
 
 /* =========================================
    MOBILE NAVIGATION AND HERO
