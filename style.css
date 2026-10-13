@@ -1772,3 +1772,104 @@ body {
         font-size: 18px;
     }
 }
+
+/* TABLET GAP FIX — 651px to 1024px */
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+
+    /* Prevent desktop positioning from creating large gaps */
+    .hero,
+    .about-section,
+    .education-expertise,
+    .contact-section {
+        height: auto !important;
+        min-height: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Hero section */
+    .hero {
+        padding: 95px 5% 35px !important;
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        gap: 25px;
+    }
+
+    /* About section */
+    .about-section {
+        padding: 30px 5% !important;
+    }
+
+    .about-layout {
+        width: 100%;
+        max-width: 100%;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    /* Education and Web Languages */
+    .education-expertise {
+        padding: 30px 5% !important;
+    }
+
+    .education-expertise-container {
+        width: 100%;
+        max-width: 100%;
+        column-gap: 22px;
+        row-gap: 25px;
+        align-items: stretch;
+    }
+
+    .section-heading {
+        margin-top: 0;
+        margin-bottom: 22px;
+    }
+
+    .web-languages-box {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        margin-top: 0;
+    }
+
+    /* Contact section */
+    .contact-section {
+        padding: 30px 5% !important;
+    }
+
+    .contact-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        gap: 22px;
+        align-items: start;
+    }
+
+    /* Footer */
+    .portfolio-footer {
+        margin-top: 0;
+    }
+}
+
+/* Keep the original desktop positioning on larger screens */
+@media screen and (min-width: 1025px) {
+    .hero {
+        margin-top: -50px;
+        padding-top: 10px;
+    }
+
+    .about-section {
+        margin-top: -100px;
+        padding-top: 10px;
+    }
+
+    .education-expertise {
+        margin-top: -350px;
+        padding-top: 10px;
+    }
+}
