@@ -1806,3 +1806,33 @@ body {
         padding-top: 10px;
     }
 }
+
+/* FORCE TABLET SPACING FIX */
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+
+    /* Navbar */
+    .navbar {
+        top: 10px !important;
+    }
+
+    /* Reduce space between navbar and hero content */
+    .hero {
+        min-height: unset !important;
+        height: auto !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 85px !important;
+        padding-bottom: 10px !important;
+        align-items: center;
+    }
+
+    /* Pull About Me closer to the hero */
+    .about-section {
+        min-height: unset !important;
+        height: auto !important;
+        margin-top: -25px !important;
+        margin-bottom: 0 !important;
+        padding-top: 10px !important;
+        padding-bottom: 25px !important;
+    }
+}
