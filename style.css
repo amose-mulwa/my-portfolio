@@ -518,7 +518,7 @@ img {
     position: relative;
     isolation: isolate;
     width: 100%;
-    margin: -40px 0 0;
+    margin: -100px 0 0;
     padding: 20px 10% 60px;
     box-sizing: border-box;
     background: transparent;
@@ -1233,8 +1233,8 @@ img {
     }
 
     .education-expertise {
-        padding: 0 5% 30px;
-        margin-top: -300px;
+        padding: 20px 5% 30px;
+
     }
 
     .education-expertise-container {
