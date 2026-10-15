@@ -198,7 +198,7 @@ img {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 10px 10% 500px;
+    padding: 10px 10% 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -518,7 +518,7 @@ img {
     position: relative;
     isolation: isolate;
     width: 100%;
-    margin: -600px 0 0;
+    margin: -800px 0 0;
     padding: 0 10% 60px;
     box-sizing: border-box;
     background: transparent;
